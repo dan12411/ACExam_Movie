@@ -15,6 +15,8 @@ class MovieTableViewController: UITableViewController {
     var dates = ["上映日期：2015-08-13","上映日期：2016-08-13"]
     
     var images = ["pic", "pic2"]
+    
+    var detail = ["由陳玉珊初次執導，宋芸樺、王大陸、李玉璽、簡廷芮所領銜主演，2015年度一部以1990年代為背景，校園愛情、青春懷舊為題材的愛情輕喜劇電影。有別於2011年度紅極一時的《那些年，我們一起追的女孩》，本片劇情走向是以女性觀點出發作為其主要視角，非真人真事。2016年7月19日，陳玉珊宣布將此戲翻拍成連續劇，由緯來戲劇台、三立都會台聯合製播，每集90分鐘，拍攝30集。", "本片改編自臺灣知名作家九把刀小說《樓下的房客》；由崔震東擔任導演、製片，柴智屏監製、 九把刀編劇，崔震東、柴智屏、江志強為出品人。製片公司為安邁進國際影業股份有限公司。本劇2015年9月28日開鏡，2015年10月10日開拍，於2015年11月殺青，2016年8月12日於香港、台灣同步上映；2016年8月25日於馬來西亞上映；2016年10月13日於新加坡上映。"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,9 +109,13 @@ class MovieTableViewController: UITableViewController {
             
             let showTitle = names[userSelectedIndexPath.row]
             
+            let showDetail = detail[userSelectedIndexPath.row]
+            
             dvc.detailImage2 = showImage
             
             dvc.title = showTitle
+            
+            dvc.detailContent = showDetail
         }
     }
 }
