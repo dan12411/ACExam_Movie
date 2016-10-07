@@ -8,12 +8,20 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class MovieDetailViewController: UIViewController {
+    
+    @IBOutlet weak var detailImage: UIImageView!
+    
+    var detailImage2: UIImage?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let detailImage2 = self.detailImage {
+            self.detailImage = detailImage2
+        }
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
