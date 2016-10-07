@@ -9,6 +9,20 @@
 import UIKit
 
 class SignViewController: UIViewController {
+    
+    @IBOutlet weak var myTextField: UITextField!
+    
+    @IBOutlet weak var contentView: UITextView!
+    
+    @IBAction func goButton(_ sender: UIButton) {
+        
+        if let inputText = myTextField.text, inputText != "" {
+            let firstSign = myTextField.text
+            contentView.text = firstSign
+//            myTextField.resignFirstResponder()
+            myTextField.text = ""
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

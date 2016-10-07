@@ -174,13 +174,58 @@
                     <view key="view" contentMode="scaleToFill" id="qPb-TG-4Ce">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mnN-9K-fWL">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Up-UA-ou0">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="4X0-63-tJf"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUG-SE-OYZ">
+                                        <state key="normal" title="新增簽名"/>
+                                        <connections>
+                                            <action selector="goButton:" destination="Wcz-kq-wcL" eventType="touchUpInside" id="kSa-su-tzR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="48M-a8-zPo"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K7L-wK-ObO">
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="257" id="rLp-Mv-Pxb"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K7L-wK-ObO" firstAttribute="leading" secondItem="qPb-TG-4Ce" secondAttribute="leading" constant="20" id="8se-r9-i8b"/>
+                            <constraint firstItem="mnN-9K-fWL" firstAttribute="leading" secondItem="qPb-TG-4Ce" secondAttribute="leading" constant="20" id="HA3-NE-pOF"/>
+                            <constraint firstAttribute="trailing" secondItem="K7L-wK-ObO" secondAttribute="trailing" constant="20" id="Qid-Bc-vXE"/>
+                            <constraint firstItem="K7L-wK-ObO" firstAttribute="top" secondItem="mnN-9K-fWL" secondAttribute="bottom" constant="20" id="XcV-AV-n9m"/>
+                            <constraint firstAttribute="trailing" secondItem="mnN-9K-fWL" secondAttribute="trailing" constant="20" id="fhR-wm-gG8"/>
+                            <constraint firstItem="mnN-9K-fWL" firstAttribute="top" secondItem="ehl-cG-hqF" secondAttribute="bottom" constant="18" id="tHV-ai-t76"/>
+                            <constraint firstItem="K7L-wK-ObO" firstAttribute="centerX" secondItem="qPb-TG-4Ce" secondAttribute="centerX" id="zgG-HJ-N1m"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="簽名" id="r2U-3T-vfm"/>
+                    <connections>
+                        <outlet property="contentView" destination="K7L-wK-ObO" id="0xY-Y1-1BT"/>
+                        <outlet property="myTextField" destination="3Up-UA-ou0" id="eRV-Ge-Xxh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zM-CP-V7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-219"/>
+            <point key="canvasLocation" x="853.60000000000002" y="-219.04047976011995"/>
         </scene>
         <!--電影-->
         <scene sceneID="Xh6-vX-8k1">
