@@ -21,6 +21,7 @@ class MovieDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if let detailImage2 = self.detailImage2 {
             self.detailImage.image = detailImage2
         }

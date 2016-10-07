@@ -10,11 +10,11 @@ import UIKit
 
 class MovieTableViewController: UITableViewController {
     
-    var names = ["我的少女時代", "我的少女時代"]
+    var names = ["我的少女時代", "樓下的房客"]
     
-    var dates = ["上映日期：2015-08-13","上映日期：2015-08-13"]
+    var dates = ["上映日期：2015-08-13","上映日期：2016-08-13"]
     
-    var images = ["pic", "pic"]
+    var images = ["pic", "pic2"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +105,11 @@ class MovieTableViewController: UITableViewController {
             
             let showImage = UIImage(named: images[userSelectedIndexPath.row])
             
+            let showTitle = names[userSelectedIndexPath.row]
+            
             dvc.detailImage2 = showImage
+            
+            dvc.title = showTitle
         }
     }
 }
