@@ -14,7 +14,7 @@ class MovieTableViewController: UITableViewController {
     
     var dates = ["上映日期：2015-08-13","上映日期：2015-08-13"]
     
-    var images = ["1", "2"]
+    var images = ["pic", "pic"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -77,6 +77,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="movieDateLabel" destination="rAR-C1-PvJ" id="lSX-kY-QiM"/>
+                                    <outlet property="movieImage" destination="At3-Cj-ewD" id="IAc-gg-0Ws"/>
                                     <outlet property="movieNameLabel" destination="grH-DB-Efu" id="Fbn-4C-Eyz"/>
                                     <segue destination="XRx-wx-0Mc" kind="show" identifier="showDetail" id="k6P-md-XQO"/>
                                 </connections>
@@ -108,8 +109,19 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yi5-IO-P2Z">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4H-kz-jsI">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-bH-3sb">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="E1q-63-MeN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="Obd-bH-3sb" firstAttribute="centerX" secondItem="h4H-kz-jsI" secondAttribute="centerX" id="5Hz-St-DdY"/>
                                             <constraint firstAttribute="height" constant="439" id="rTT-Pa-HRZ"/>
                                         </constraints>
                                     </view>
@@ -125,9 +137,10 @@
                                     <constraint firstItem="h4H-kz-jsI" firstAttribute="top" secondItem="Yi5-IO-P2Z" secondAttribute="top" id="4ik-Nf-tDV"/>
                                     <constraint firstAttribute="bottom" secondItem="h4H-kz-jsI" secondAttribute="bottom" priority="250" constant="20" id="Kce-Af-7tG"/>
                                     <constraint firstItem="ZEO-Cb-aKZ" firstAttribute="centerX" secondItem="Yi5-IO-P2Z" secondAttribute="centerX" id="bo6-vX-tv9"/>
+                                    <constraint firstItem="ZEO-Cb-aKZ" firstAttribute="top" secondItem="Yi5-IO-P2Z" secondAttribute="top" constant="40" id="d8O-Dk-Zww"/>
                                     <constraint firstItem="h4H-kz-jsI" firstAttribute="centerX" secondItem="Yi5-IO-P2Z" secondAttribute="centerX" id="nD6-oG-kkr"/>
                                     <constraint firstItem="h4H-kz-jsI" firstAttribute="leading" secondItem="Yi5-IO-P2Z" secondAttribute="leading" id="owM-cC-ksu"/>
-                                    <constraint firstItem="ZEO-Cb-aKZ" firstAttribute="centerY" secondItem="Yi5-IO-P2Z" secondAttribute="centerY" id="uRv-hI-xDQ"/>
+                                    <constraint firstItem="Obd-bH-3sb" firstAttribute="top" secondItem="ZEO-Cb-aKZ" secondAttribute="bottom" constant="50" id="s8i-zN-Eu1"/>
                                     <constraint firstAttribute="trailing" secondItem="h4H-kz-jsI" secondAttribute="trailing" id="x8h-sF-NSV"/>
                                 </constraints>
                             </scrollView>
@@ -143,6 +156,7 @@
                     <navigationItem key="navigationItem" title="我的少女時代" id="Zlr-mw-a7q"/>
                     <connections>
                         <outlet property="detailImage" destination="ZEO-Cb-aKZ" id="6g9-nd-J39"/>
+                        <outlet property="detailLabel" destination="Obd-bH-3sb" id="kAP-AV-STF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="so4-Ah-RAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
