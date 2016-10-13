@@ -14,20 +14,38 @@ class SignViewController: UIViewController {
     
     @IBOutlet weak var contentView: UITextView!
     
+    var sign = [String]()
+    
     @IBAction func goButton(_ sender: UIButton) {
         
         if let inputText = myTextField.text, inputText != "" {
-            let firstSign = myTextField.text
-            contentView.text = firstSign
-//            myTextField.resignFirstResponder()
+
+            sign.append(inputText)
+            
+            switch sign.count {
+            case 1 :
+                contentView.text = sign[0]
+            case 2 :
+                contentView.text = "\(sign[0])\n\(sign[1])"
+            case 3 :
+                contentView.text = "\(sign[0])\n\(sign[1])\n\(sign[2])"
+            default :
+                let myAlert = UIAlertController(title: "簽名人次已達三人", message: "下次請早", preferredStyle: .alert)
+                let okAtion = UIAlertAction(title: "OK", style: .default, handler: nil)
+                myAlert.addAction(okAtion)
+                present(myAlert, animated: true, completion: nil)
+            }
+            
+            myTextField.resignFirstResponder()
             myTextField.text = ""
         }
     }
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.text = ""
-        
     }
 
     override func didReceiveMemoryWarning() {
