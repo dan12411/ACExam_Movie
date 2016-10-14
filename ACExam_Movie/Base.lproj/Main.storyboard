@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -111,9 +110,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4H-kz-jsI">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-bH-3sb">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="E1q-63-MeN"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -121,36 +117,37 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Obd-bH-3sb" firstAttribute="centerX" secondItem="h4H-kz-jsI" secondAttribute="centerX" id="5Hz-St-DdY"/>
-                                            <constraint firstAttribute="height" constant="439" id="rTT-Pa-HRZ"/>
+                                            <constraint firstItem="Obd-bH-3sb" firstAttribute="top" secondItem="h4H-kz-jsI" secondAttribute="top" constant="280" id="6NV-2A-SBo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Obd-bH-3sb" secondAttribute="trailing" constant="30" id="JjK-5u-QyJ"/>
+                                            <constraint firstItem="Obd-bH-3sb" firstAttribute="leading" secondItem="h4H-kz-jsI" secondAttribute="leading" constant="30" id="Rg4-jJ-4cS"/>
+                                            <constraint firstAttribute="bottom" secondItem="Obd-bH-3sb" secondAttribute="bottom" priority="250" constant="40" id="mkX-nM-mff"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEO-Cb-aKZ">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="2l1-WE-q7e"/>
-                                            <constraint firstAttribute="height" constant="200" id="6Ot-tO-qAy"/>
-                                            <constraint firstAttribute="width" secondItem="ZEO-Cb-aKZ" secondAttribute="height" multiplier="1:1" id="K61-cU-8KU"/>
+                                            <constraint firstAttribute="height" constant="200" id="fSH-Gn-VCW"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="top" secondItem="Yi5-IO-P2Z" secondAttribute="top" id="4ik-Nf-tDV"/>
-                                    <constraint firstAttribute="bottom" secondItem="h4H-kz-jsI" secondAttribute="bottom" priority="250" constant="20" id="Kce-Af-7tG"/>
-                                    <constraint firstItem="ZEO-Cb-aKZ" firstAttribute="centerX" secondItem="Yi5-IO-P2Z" secondAttribute="centerX" id="bo6-vX-tv9"/>
-                                    <constraint firstItem="ZEO-Cb-aKZ" firstAttribute="top" secondItem="Yi5-IO-P2Z" secondAttribute="top" constant="40" id="d8O-Dk-Zww"/>
-                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="centerX" secondItem="Yi5-IO-P2Z" secondAttribute="centerX" id="nD6-oG-kkr"/>
-                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="leading" secondItem="Yi5-IO-P2Z" secondAttribute="leading" id="owM-cC-ksu"/>
-                                    <constraint firstItem="Obd-bH-3sb" firstAttribute="top" secondItem="ZEO-Cb-aKZ" secondAttribute="bottom" constant="50" id="s8i-zN-Eu1"/>
-                                    <constraint firstAttribute="trailing" secondItem="h4H-kz-jsI" secondAttribute="trailing" id="x8h-sF-NSV"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4H-kz-jsI" secondAttribute="trailing" id="2On-oM-LXS"/>
+                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="centerX" secondItem="ZEO-Cb-aKZ" secondAttribute="centerX" id="C1l-QI-I3g"/>
+                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="leading" secondItem="Yi5-IO-P2Z" secondAttribute="leading" id="CZ8-BP-JrA"/>
+                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="top" secondItem="Yi5-IO-P2Z" secondAttribute="top" id="Fsg-w1-EmF"/>
+                                    <constraint firstAttribute="bottom" secondItem="h4H-kz-jsI" secondAttribute="bottom" id="MIN-j2-0xy"/>
+                                    <constraint firstItem="ZEO-Cb-aKZ" firstAttribute="leading" secondItem="Yi5-IO-P2Z" secondAttribute="leading" constant="88" id="VWd-79-frL"/>
+                                    <constraint firstItem="ZEO-Cb-aKZ" firstAttribute="top" secondItem="Yi5-IO-P2Z" secondAttribute="top" constant="50" id="X69-82-Z6Y"/>
+                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="centerX" secondItem="Yi5-IO-P2Z" secondAttribute="centerX" id="mjf-Lb-f3R"/>
+                                    <constraint firstItem="h4H-kz-jsI" firstAttribute="centerY" secondItem="Yi5-IO-P2Z" secondAttribute="centerY" id="yPF-yB-2KS"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jhe-oK-cZ3" firstAttribute="top" secondItem="Yi5-IO-P2Z" secondAttribute="bottom" id="DRw-fJ-ab0"/>
-                            <constraint firstItem="Yi5-IO-P2Z" firstAttribute="top" secondItem="JwK-yZ-ct0" secondAttribute="bottom" id="PA1-kO-gFh"/>
-                            <constraint firstAttribute="trailing" secondItem="Yi5-IO-P2Z" secondAttribute="trailing" id="UQE-nk-FXv"/>
-                            <constraint firstItem="Yi5-IO-P2Z" firstAttribute="leading" secondItem="lhE-VP-MkZ" secondAttribute="leading" id="onP-ex-j1o"/>
+                            <constraint firstItem="Yi5-IO-P2Z" firstAttribute="leading" secondItem="lhE-VP-MkZ" secondAttribute="leading" id="4PZ-MF-ACC"/>
+                            <constraint firstItem="Yi5-IO-P2Z" firstAttribute="top" secondItem="lhE-VP-MkZ" secondAttribute="top" id="B2r-N0-oSF"/>
+                            <constraint firstAttribute="bottom" secondItem="Yi5-IO-P2Z" secondAttribute="bottom" id="r86-dZ-Rqt"/>
+                            <constraint firstAttribute="trailing" secondItem="Yi5-IO-P2Z" secondAttribute="trailing" id="uOw-aG-4QX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的少女時代" id="Zlr-mw-a7q"/>
@@ -161,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="so4-Ah-RAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2173.5999999999999" y="419.64017991004499"/>
+            <point key="canvasLocation" x="2212" y="419.64017991004499"/>
         </scene>
         <!--簽名-->
         <scene sceneID="hzX-hZ-In7">
